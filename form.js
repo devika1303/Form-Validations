@@ -7,4 +7,12 @@ form.addEventListener("click", function(event){
     const password = document.getElementById("password").value.trim();
     const confirmpassword = document.getElementById("confirmpassword").value.trim();
 
+    let isvalid = true 
+
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("mobileError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+    document.getElementById("confirmpasswordError").textContent = "";
+
 })
