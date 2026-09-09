@@ -46,8 +46,21 @@ form.addEventListener("click", function(event){
         document.getElementById("mobileError").textContent = "Mobile number required"
         isvalid = false;
     }
-    else if(!mobileError.test(mobile)){
+    else if(!mobileRegex.test(mobile)){
         document.getElementById("mobileError").textContent = "Enter valid mobile number"
         isvalid =  false;
     }
+    
+    //password
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+    if(password === ""){
+        document.getElementById("passwordError").textContent = "password is required"
+        isvalid = false;
+    }
+    else if(!passwordRegex.test(password)){
+        document.getElementById("passwordError").textContent = "Enter a valid password"
+        isvalid = false;
+    }
+
+
 })
