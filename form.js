@@ -61,7 +61,6 @@ form.addEventListener("click", function(event){
         document.getElementById("passwordError").textContent = "Enter a valid password"
         isvalid = false;
     }
-    
     //confirmpassword
 
     if(confirmpassword === ""){
@@ -72,6 +71,14 @@ form.addEventListener("click", function(event){
         document.getElementById("confirmpasswordError").textContent = "password doesn't match";
         isvalid = false;
     }
+
+    //final validation
+
+     if(isvalid){
+        document.getElementById("successmessage").textContent = "Registration successfull"
+
+        form.reset();
+     }
 
 
 })
