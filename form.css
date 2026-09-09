@@ -12,3 +12,14 @@ body{
     padding: 30px;
     border-radius: 10px;
 }
+.form{
+    margin-bottom: 10px;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form{
+    font-weight: bold;
+}
