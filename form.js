@@ -61,6 +61,17 @@ form.addEventListener("click", function(event){
         document.getElementById("passwordError").textContent = "Enter a valid password"
         isvalid = false;
     }
+    
+    //confirmpassword
+
+    if(confirmpassword === ""){
+        document.getElementById("confirmpasswordError").textContent = "Confirm password is required"
+        isvalid = false;
+    }
+    else if(password !== confirmpassword){
+        document.getElementById("confirmpasswordError").textContent = "password doesn't match";
+        isvalid = false;
+    }
 
 
 })
