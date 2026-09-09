@@ -40,5 +40,14 @@ form.addEventListener("click", function(event){
         isvalid = false;
     }
 
-    
+    //mobile number
+    const mobileRegex = /^[6-9]\d{9}$/
+    if(mobile === ""){
+        document.getElementById("mobileError").textContent = "Mobile number required"
+        isvalid = false;
+    }
+    else if(!mobileError.test(mobile)){
+        document.getElementById("mobileError").textContent = "Enter valid mobile number"
+        isvalid =  false;
+    }
 })
