@@ -17,13 +17,28 @@ form.addEventListener("click", function(event){
 
     document.getElementById("successmessage").textContent = "";
 
-    const nameRegex = /^[A-Za-z][8,50]$/
+    //fullname
+    const nameRegex = /^[A-Za-z]{3,50}$/;
     if(fullname === "") {
         document.getElementById("nameError").textContent = "Full name is required";
         isvalid = false;
     } 
     else if(!nameRegex.test(fullname)) {
-        document.getElementById("name").textContent = "Enter a valid full name";
+        document.getElementById("nameError").textContent = "Enter a valid full name";
         isvalid = false;
     }
+
+    //email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(email === ""){
+        document.getElementById("emailError").textContent = "email is required";
+        isvalid = false;
+    }
+    else if(!emailRegex.test(email)){
+        document.getElementById("emailError").textContent = "Enter a valid email";
+        isvalid = false;
+    }
+
+    
 })
