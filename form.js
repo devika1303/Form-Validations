@@ -15,4 +15,5 @@ form.addEventListener("click", function(event){
     document.getElementById("passwordError").textContent = "";
     document.getElementById("confirmpasswordError").textContent = "";
 
+    document.getElementById("successmessage").textContent = "";
 })
