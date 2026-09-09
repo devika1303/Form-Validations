@@ -7,7 +7,7 @@ form.addEventListener("click", function(event){
     const password = document.getElementById("password").value.trim();
     const confirmpassword = document.getElementById("confirmpassword").value.trim();
 
-    let isvalid = true 
+    let isvalid = true;
 
     document.getElementById("nameError").textContent = "";
     document.getElementById("emailError").textContent = "";
@@ -16,4 +16,14 @@ form.addEventListener("click", function(event){
     document.getElementById("confirmpasswordError").textContent = "";
 
     document.getElementById("successmessage").textContent = "";
+
+    const nameRegex = /^[A-Za-z][8,50]$/
+    if(fullname === "") {
+        document.getElementById("nameError").textContent = "Full name is required";
+        isvalid = false;
+    } 
+    else if(!nameRegex.test(fullname)) {
+        document.getElementById("name").textContent = "Enter a valid full name";
+        isvalid = false;
+    }
 })
